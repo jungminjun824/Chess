@@ -4,18 +4,14 @@ using UnityEngine;
 
 public class Chessman : MonoBehaviour
 {
-    // References
     public GameObject controller;
     public GameObject movePlate;
 
-    // Positions
     private int xBoard = -1;
     private int yBoard = -1;
 
-    // Variable to keep track of "black" player of "white" player
     private string player;
 
-    // References for all the sptrites that the chesspiece can be
     public Sprite black_queen, black_knight, black_bishop, black_king, black_rook, black_pawn;
     public Sprite white_queen, white_knight, white_bishop, white_king, white_rook, white_pawn;
 
@@ -23,7 +19,6 @@ public class Chessman : MonoBehaviour
     {
         controller = GameObject.FindGameObjectWithTag("GameController");
 
-        // take the instantiated location and adjust the transform
         SetCoords();
 
         switch (this.name)
